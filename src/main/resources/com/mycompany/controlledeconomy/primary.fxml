@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="550.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="30.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="30.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ListView fx:id="listView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="475.0" prefWidth="150.0" style="-fx-background-color: #172e3b;" />
+      <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #172e3b;" GridPane.columnIndex="2">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="426.199951171875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="99.800048828125" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="128.59998168945313" minHeight="10.0" prefHeight="92.20000991821288" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="330.4" minHeight="10.0" prefHeight="330.4" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="117.59999999999997" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="666.0" text="PLANNED ECONOMY SIMULATOR" textFill="#cedbea" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="372.1999206542969" minWidth="10.0" prefWidth="207.2" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="389.79999351501465" minWidth="10.0" prefWidth="128.8" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="49.200006103515626" vgrow="NEVER" />
+                  <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="57.19999389648438" vgrow="NEVER" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="57.19999389648438" vgrow="NEVER" />
+                  <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="57.19999389648438" vgrow="NEVER" />
+                  <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="57.19999389648438" vgrow="NEVER" />
+              </rowConstraints>
+               <children>
+                  <Slider fx:id="sliderTPM" max="1200.0" min="60.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Slider fx:id="sliderBBratio" blockIncrement="5.0" value="50.0" GridPane.columnIndex="1" />
+                  <Label contentDisplay="RIGHT" prefHeight="18.0" prefWidth="212.0" text="    BB ratio" textAlignment="RIGHT" textFill="#b7d0e1" />
+                  <Label prefHeight="18.0" prefWidth="214.0" text="    transactions per minute" textFill="#cde6ef" GridPane.rowIndex="1" />
+                  <Button alignment="TOP_CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#currencyButtonClicked" prefHeight="26.0" prefWidth="313.0" style="-fx-background-color: #223f4f;" text="CREATE CURRENCY MARKET" textAlignment="CENTER" textFill="#cbe2ff" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="CommodityMarketButton" alignment="TOP_CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#commodityButtonClicked" prefHeight="26.0" style="-fx-background-color: #223f4f;" text="CREATE COMMODITY MARKET" textAlignment="CENTER" textFill="#cbe2ff" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button alignment="TOP_CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#stockButtonClicked" prefHeight="26.0" style="-fx-background-color: #223f4f;" text="CREATE STOCK MARKET" textAlignment="CENTER" textFill="#cbe2ff" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="assetButton" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#createAsset" prefHeight="26.0" prefWidth="259.0" style="-fx-background-color: #4d6c7d;" text="CREATE ASSET" textFill="WHITE" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin></Button>
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="2">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="200.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.1999858856201" minWidth="10.0" prefWidth="298.40001220703124" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                     <buttons>
+                        <Button fx:id="investorButton" alignment="CENTER" contentDisplay="RIGHT" minWidth="30.0" mnemonicParsing="false" onAction="#switchToTraders" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #172e3b;" textAlignment="JUSTIFY">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../tradersIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="CENTER" maxWidth="30.0" minWidth="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="33.0" style="-fx-background-color: #172e3b;" textAlignment="JUSTIFY">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: url('homebutton.png');">
+                                 <image>
+                                    <Image url="@../../../homebutton.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </buttons>
+                  </ButtonBar>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+      <ListView fx:id="assetListView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #223f4f;" GridPane.columnIndex="1" />
+   </children>
+</GridPane>

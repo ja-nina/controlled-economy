@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #172e3b;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.controlledeconomy.ChartController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="495.1999877929687" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="150.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ListView fx:id="assetList" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #172e3b;" stylesheets="@../../../liststyling.css" GridPane.columnIndex="1" />
+      <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="395.20001220703125" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.79998779296875" minWidth="10.0" prefWidth="134.20001220703125" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="373.99999084472654" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="26.0" valignment="BASELINE" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <GridPane GridPane.columnIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="164.0000144958496" minHeight="10.0" prefHeight="87.80000000000001" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="164.0000144958496" minHeight="10.0" prefHeight="41.99998779296874" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="195.00000610351566" minHeight="10.0" prefHeight="53.199984741210955" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="245.6000244140625" minHeight="10.0" prefHeight="202.00001525878906" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#addLine" prefHeight="26.0" prefWidth="196.0" text="Add" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Label fx:id="assetText" prefHeight="50.0" prefWidth="134.0" text="CURRENT ASSET" textFill="#bfd1e4" />
+               </children>
+            </GridPane>
+            <LineChart fx:id="lineChart" animated="false" cacheHint="SPEED" cacheShape="false" maxWidth="1.7976931348623157E308" pickOnBounds="false" style="-fx-background-color: #172e3b; -fx-opacity: 100;" stylesheets="@../../../liststyling.css" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+              <xAxis>
+                <NumberAxis animated="false" autoRanging="false" forceZeroInRange="false" minorTickCount="0" minorTickVisible="false" side="BOTTOM" tickLabelGap="5.0" tickLabelsVisible="false" tickLength="100.0" tickMarkVisible="false" tickUnit="6.0" upperBound="0.0" fx:id="x" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="y" forceZeroInRange="false" side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Button fx:id="homeButton" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#switchHome" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #172e3b;" GridPane.valignment="TOP">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../homebutton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

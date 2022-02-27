@@ -1,0 +1,89 @@
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    /* 3:, 4: */
+    -fx-background-color: #688ea3;
+    -fx-text-fill: #0f2029; /* 5 */
+}
+.list-cell { 
+    -fx-text-fill: #cbe2ff; 
+    -fx-background-color: #172e3b/* 5 */ }
+
+.list-cell:filled:hover { 
+    -fx-background-color: linear-gradient(#172e3b 0%, #173240 25%, #203947 75%, #172e3b 100%); /* 2 */
+    -fx-text-fill: white; /* 5 */
+}
+
+#assetListView .list-cell:filled:selected:focused, .list-cell:filled:selected {
+    /* 3:, 4: */
+    -fx-background-color: #688ea3;
+    -fx-text-fill: #0f2029; /* 5 */
+}
+#assetListView .list-cell { 
+    -fx-text-fill: #cbe2ff; 
+    -fx-background-color: #223f4f/* 5 */ }
+
+#assetListView .list-cell:filled:hover { 
+    -fx-background-color: linear-gradient( #223f4f 0%, #284859 25%, #365769 75%,  #223f4f 100%);; /* 2 */
+    -fx-text-fill: white; /* 5 */
+}
+
+
+
+#ListViewWallet .list-cell:filled:selected:focused, .list-cell:filled:selected {
+    /* 3:, 4: */
+    -fx-background-color: #688ea3;
+    -fx-text-fill: #0f2029; /* 5 */
+}
+#ListViewWallet .list-cell { 
+    -fx-text-fill: #cbe2ff; 
+    -fx-background-color: #223f4f/* 5 */ }
+
+#ListViewWallet.list-cell:filled:hover { 
+    -fx-background-color: linear-gradient( #223f4f 0%, #284859 25%, #365769 75%,  #223f4f 100%);; /* 2 */
+    -fx-text-fill: white; /* 5 */
+}
+
+ 
+.axis-label {
+  -fx-text-fill: #4682b4;
+}
+ 
+.chart-legend {
+   -fx-background-color:  transparent;
+   -fx-padding: 20px;
+}
+ 
+.chart-legend-item-symbol{
+   -fx-background-radius: 0;
+}
+ 
+.chart-legend-item{
+    -fx-text-fill: #c2cfdc;
+}
+ 
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: #27395c;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #27395c;
+}
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+.chart-series-line {    
+    -fx-stroke-width: 2px;
+    -fx-effect: null;
+}
+ 
+.default-color0.chart-series-line { -fx-stroke: #e9967a; }
+.default-color1.chart-series-line { -fx-stroke: #f0e68c; }
+.default-color2.chart-series-line { -fx-stroke: #dda0dd; }
+ 
+.default-color0.chart-line-symbol { -fx-background-color: #e9967a, white; }
+.default-color1.chart-line-symbol { -fx-background-color: #f0e68c, white; }
+.default-color2.chart-line-symbol { -fx-background-color: #dda0dd, white; }
